@@ -6,3 +6,7 @@ output "website_url" {
 output "api_endpoint" {
   value = "${aws_apigatewayv2_api.api.api_endpoint}/greet"
 }
+
+output "example_output" {
+  value = "This is a new output (again)"
+}
