@@ -151,6 +151,7 @@ resource "aws_s3_object" "html" {
   content_type = "text/html"
 }
 
+
 resource "aws_s3_object" "js" {
   bucket       = aws_s3_bucket.website.id
   key          = "script.js"
@@ -161,4 +162,15 @@ resource "aws_s3_object" "js" {
         api_endpoint = "${aws_apigatewayv2_api.api.api_endpoint}/greet"
     }
 )
+}
+
+
+terraform {
+  backend "remote" {
+    organization = "<sandbox-development>"
+
+    workspaces {
+      name = "<webserver-test>"
+    }
+  }
 }
