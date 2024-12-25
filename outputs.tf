@@ -8,5 +8,5 @@ output "api_endpoint" {
 }
 
 output "example_output" {
-  value = "This is a new output"
+  value = "This is a new output (again)"
 }
