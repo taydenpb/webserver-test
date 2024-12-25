@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeting App</title>
+  <style>
+    /* Basic Reset & Font */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    /* Container to center content */
+    .container {
+      max-width: 400px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Page Heading */
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    /* Input + button layout */
+    .input-group {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    #nameInput {
+      flex: 1;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Greeting and Error Display */
+    #greeting {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    #error {
+      margin-top: 1rem;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome!</h1>
+    <div class="input-group">
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button onclick="getGreeting()">Get Greeting</button>
+    </div>
+    <p id="greeting"></p>
+    <p id="error"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
